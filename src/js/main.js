@@ -8,3 +8,4 @@ $('button').on('click', function(){
 $('div').click(function(){
     console.log($(this).index());
 });
+console.log($('.findme').siblings());
