@@ -9,3 +9,4 @@ $('div').click(function(){
     console.log($(this).index());
 });
 console.log($('.findme').siblings());
+$('button').fadeIn(2000);
