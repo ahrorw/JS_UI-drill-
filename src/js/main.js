@@ -1,12 +1,12 @@
 import $ from './lib/lib';
-$('.ac').on('click', function(){
-    $(this).toggleClass('active');
+$('#first').on('click', () => {
+    $('div').eq(1).fadeOut(800);
 });
-$('button').on('click', function(){
-    $(this).toggleClass('active');
+
+$('[data-count="second"]').on('click', () => {
+    $('div').eq(2).fadeOut(800);
 });
-$('div').click(function(){
-    console.log($(this).index());
+
+$('button').eq(2).on('click', () => {
+    $('.w-500').fadeOut(800);
 });
-console.log($('.findme').siblings());
-$('button').fadeIn(2000);
