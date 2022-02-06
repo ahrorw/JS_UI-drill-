@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Library</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <!--   <button class = 'btn btn-primary'>Click me</button>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--   <button class = 'btn btn-primary'>Click me</button>
     <button class = 'btn btn-success'>Click me</button>
     <button class = 'btn btn-dark'>Click me</button>
     <button class = 'btn btn-danger'>Click me</button>
@@ -21,45 +21,154 @@
     <button class = 'btn btn-outline-warning'>Click me</button>
     <hr> -->
     <div class="container">
-        <button class="btn btn-primary m20" id="first">Fade out first text</button>
-        <button class="btn btn-dark m20" data-count="second">Fade out second text</button>
-        <button class="btn btn-warning m20">Fade out all texts</button>
-        <button class="dropdown">
-            <div class="btn btn-primary dropdown-toggle" id="dropdownMenuButton">Dropdwon</div>
-            <div class="dropdown-menu" data-toggle-id = "dropdownMenuButton">
-                <a href="#" class="dropdown-item">Action #1</a>
-                <a href="#" class="dropdown-item">Action #2</a>
-                <a href="#" class="dropdown-item">Action #3</a>
-            </div>
-        </button>
-        <button class="dropdown">
-            <div class="btn btn-primary dropdown-toggle" id="dropdownMenuBtn">Dropdwon</div>
-            <div class="dropdown-menu" data-toggle-id = "dropdownMenuBtn">
-                <a href="#" class="dropdown-item">Action #1</a>
-                <a href="#" class="dropdown-item">Action #2</a>
-                <a href="#" class="dropdown-item">Action #3</a>
-            </div>
-        </button>
-        <div class="w-500 block-center mt-20">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi maiores unde sit officia dolores totam, ea odit consectetur quos architecto accusantium porro, assumenda hic soluta nostrum voluptatum libero. Asperiores, debitis.
-            Ipsa ea architecto maxime! Eveniet vero dignissimos ipsam cum quam voluptatibus consequuntur exercitationem vitae nobis corrupti necessitatibus deleniti in eaque, labore quae illo, provident sequi doloremque doloribus? Vel, optio repellendus!
-            Provident placeat repellendus culpa hic earum asperiores, blanditiis quasi nemo similique praesentium adipisci deserunt perferendis quibusdam, dolore modi sequi, sint obcaecati odio. Rem ullam quas alias natus maiores nostrum obcaecati.
-            Porro iure ea soluta modi nihil obcaecati, quod ad quisquam omnis error praesentium cum adipisci recusandae assumenda aliquam culpa fuga illo facilis saepe reiciendis reprehenderit sequi repellendus veritatis atque? Non.
-            Dicta incidunt, assumenda ipsam adipisci voluptates, cumque aspernatur amet quae iusto corporis fuga ea quasi saepe optio quo dolorum magni. At dolore deleniti nostrum necessitatibus, vel rem cumque maxime quidem.
+      <button class="btn btn-primary m20" id="first">
+        Fade out first text
+      </button>
+      <button class="btn btn-dark m20" data-count="second">
+        Fade out second text
+      </button>
+      <button class="btn btn-warning m20">Fade out all texts</button>
+      <!--  dropdown menu -->
+      <button class="dropdown">
+        <div class="btn btn-danger dropdown-toggle" id="dropdownMenuButton">
+          Dropdwon
         </div>
-        
-        <div class="w-500 block-center mt-20">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi maiores unde sit officia dolores totam, ea odit consectetur quos architecto accusantium porro, assumenda hic soluta nostrum voluptatum libero. Asperiores, debitis.
-            Ipsa ea architecto maxime! Eveniet vero dignissimos ipsam cum quam voluptatibus consequuntur exercitationem vitae nobis corrupti necessitatibus deleniti in eaque, labore quae illo, provident sequi doloremque doloribus? Vel, optio repellendus!
-            Provident placeat repellendus culpa hic earum asperiores, blanditiis quasi nemo similique praesentium adipisci deserunt perferendis quibusdam, dolore modi sequi, sint obcaecati odio. Rem ullam quas alias natus maiores nostrum obcaecati.
-            Porro iure ea soluta modi nihil obcaecati, quod ad quisquam omnis error praesentium cum adipisci recusandae assumenda aliquam culpa fuga illo facilis saepe reiciendis reprehenderit sequi repellendus veritatis atque? Non.
-            Dicta incidunt, assumenda ipsam adipisci voluptates, cumque aspernatur amet quae iusto corporis fuga ea quasi saepe optio quo dolorum magni. At dolore deleniti nostrum necessitatibus, vel rem cumque maxime quidem.
+        <div class="dropdown-menu" data-toggle-id="dropdownMenuButton">
+          <a href="#" class="dropdown-item">Action #1</a>
+          <a href="#" class="dropdown-item">Action #2</a>
+          <a href="#" class="dropdown-item">Action #3</a>
         </div>
+      </button>
+      <button class="dropdown">
+        <div class="btn btn-success dropdown-toggle" id="dropdownMenuBtn">
+          Dropdwon
+        </div>
+        <div class="dropdown-menu" data-toggle-id="dropdownMenuBtn">
+          <a href="#" class="dropdown-item">Action #1</a>
+          <a href="#" class="dropdown-item">Action #2</a>
+          <a href="#" class="dropdown-item">Action #3</a>
+        </div>
+      </button>
+      <!-- card -->
+      <div class="goods d-flex f-space-around">
+        <div class="card">
+          <img
+            src="https://www.rgo.ru/sites/default/files/styles/head_image_article/public/node/38230/kabancev-yurii-zerkalo-2018-379938.jpg?itok=llNijpJA"
+            alt="photo"
+            class="card-img"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              nihil fugit sunt accusantium
+            </p>
+            <a href="#" class="btn btn-primary" data-toggle = "modal"
+            data-target="#exampleModal">Link to</a>
+          </div>
+        </div>
+        <div class="card">
+          <img
+            src="https://www.rgo.ru/sites/default/files/styles/head_image_article/public/node/38230/kabancev-yurii-zerkalo-2018-379938.jpg?itok=llNijpJA"
+            alt="photo"
+            class="card-img"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title #2</h5>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+              nihil fugit sunt accusantium
+            </p>
+            <a href="#" class="btn btn-danger" data-toggle = "modal"
+            data-target="#exampleModal2">Link to</a>
+          </div>
+        </div>
+      </div>
+      <!-- modal -->
+      <div class="modal" id="exampleModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <button class="close" data-close = ''>
+              <span>&times;</span>
+            </button>
+            <div class="modal-header">
+              <div class="modal-title">Modal title</div>
+            </div>
+            <div class="modal-body">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus sed praesentium cumque minima consectetur voluptate
+              molestias soluta non voluptates eveniet earum autem at, saepe
+              doloremque cum provident tempore eaque velit!
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger" data-close="">Close</button>
+              <button class="btn btn-success">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="exampleModal2">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <button class="close" data-close = ''>
+              <span>&times;</span>
+            </button>
+            <div class="modal-header">
+              <div class="modal-title">Modal title #2</div>
+            </div>
+            <div class="modal-body">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus sed praesentium cumque minima consectetur voluptate
+              
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger" data-close="">Close</button>
+              <button class="btn btn-success">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-500 block-center mt-20">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+        maiores unde sit officia dolores totam, ea odit consectetur quos
+        architecto accusantium porro, assumenda hic soluta nostrum voluptatum
+        libero. Asperiores, debitis. Ipsa ea architecto maxime! Eveniet vero
+        dignissimos ipsam cum quam voluptatibus consequuntur exercitationem
+        vitae nobis corrupti necessitatibus deleniti in eaque, labore quae illo,
+        provident sequi doloremque doloribus? Vel, optio repellendus! Provident
+        placeat repellendus culpa hic earum asperiores, blanditiis quasi nemo
+        similique praesentium adipisci deserunt perferendis quibusdam, dolore
+        modi sequi, sint obcaecati odio. Rem ullam quas alias natus maiores
+        nostrum obcaecati. Porro iure ea soluta modi nihil obcaecati, quod ad
+        quisquam omnis error praesentium cum adipisci recusandae assumenda
+        aliquam culpa fuga illo facilis saepe reiciendis reprehenderit sequi
+        repellendus veritatis atque? Non. Dicta incidunt, assumenda ipsam
+        adipisci voluptates, cumque aspernatur amet quae iusto corporis fuga ea
+        quasi saepe optio quo dolorum magni. At dolore deleniti nostrum
+        necessitatibus, vel rem cumque maxime quidem.
+      </div>
 
+      <div class="w-500 block-center mt-20">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+        maiores unde sit officia dolores totam, ea odit consectetur quos
+        architecto accusantium porro, assumenda hic soluta nostrum voluptatum
+        libero. Asperiores, debitis. Ipsa ea architecto maxime! Eveniet vero
+        dignissimos ipsam cum quam voluptatibus consequuntur exercitationem
+        vitae nobis corrupti necessitatibus deleniti in eaque, labore quae illo,
+        provident sequi doloremque doloribus? Vel, optio repellendus! Provident
+        placeat repellendus culpa hic earum asperiores, blanditiis quasi nemo
+        similique praesentium adipisci deserunt perferendis quibusdam, dolore
+        modi sequi, sint obcaecati odio. Rem ullam quas alias natus maiores
+        nostrum obcaecati. Porro iure ea soluta modi nihil obcaecati, quod ad
+        quisquam omnis error praesentium cum adipisci recusandae assumenda
+        aliquam culpa fuga illo facilis saepe reiciendis reprehenderit sequi
+        repellendus veritatis atque? Non. Dicta incidunt, assumenda ipsam
+        adipisci voluptates, cumque aspernatur amet quae iusto corporis fuga ea
+        quasi saepe optio quo dolorum magni. At dolore deleniti nostrum
+        necessitatibus, vel rem cumque maxime quidem.
+      </div>
     </div>
 
-    
-
-    <script src='script.js'></script>    
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
