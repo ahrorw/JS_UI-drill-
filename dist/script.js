@@ -308,6 +308,30 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.createModal = function (
 
 /***/ }),
 
+/***/ "./src/js/lib/components/tab.js":
+/*!**************************************!*\
+  !*** ./src/js/lib/components/tab.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core */ "./src/js/lib/core.js");
+
+
+_core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.tab = function () {
+  for (let i = 0; i < this.length; i++) {
+    Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).click(() => {
+      Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).addClass('tab-item--active').siblings().removeClass('tab-item--active').closest('.tab').find('.tab-content').removeClass('tab-content--active').eq(Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])(this[i]).index()).addClass('tab-content--active');
+    });
+  }
+};
+
+Object(_core__WEBPACK_IMPORTED_MODULE_0__["default"])('[data-tabpanel] .tab-item').tab();
+
+/***/ }),
+
 /***/ "./src/js/lib/core.js":
 /*!****************************!*\
   !*** ./src/js/lib/core.js ***!
@@ -361,6 +385,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_effects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/effects */ "./src/js/lib/modules/effects.js");
 /* harmony import */ var _components_dropdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/dropdown */ "./src/js/lib/components/dropdown.js");
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/modal */ "./src/js/lib/components/modal.js");
+/* harmony import */ var _components_tab__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/tab */ "./src/js/lib/components/tab.js");
+
 
 
 
@@ -418,8 +444,8 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.index = function () {
 };
 
 _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.find = function (selector) {
-  let numberOfIndex = 0,
-      counter = 0;
+  let numberOfItems = 0;
+  let counter = 0;
   const copyObj = Object.assign({}, this);
 
   for (let i = 0; i < copyObj.length; i++) {
@@ -429,14 +455,19 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.find = function (selecto
       continue;
     }
 
-    numberOfIndex += arr.length;
+    for (let j = 0; j < arr.length; j++) {
+      this[counter] = arr[j];
+      counter++;
+    }
+
+    numberOfItems += arr.length;
   }
 
-  this.length = numberOfIndex;
+  this.length = numberOfItems;
   const objLength = Object.keys(this).length;
 
-  for (; numberOfIndex < objLength; numberOfIndex++) {
-    delete this[numberOfIndex];
+  for (; numberOfItems < objLength; numberOfItems++) {
+    delete this[numberOfItems];
   }
 
   return this;
@@ -492,6 +523,121 @@ _core__WEBPACK_IMPORTED_MODULE_0__["default"].prototype.siblings = function () {
 
   return this;
 };
+/* 
+import $ from '../core';
+
+$.prototype.html = function(content) {
+    for (let i = 0; i < this.length; i++) {
+        if (content) {
+            this[i].innerHTML = content;
+        } else {
+            return this[i].innerHTML;
+        }
+    }
+
+    return this;
+};
+
+$.prototype.eq = function(i) {
+    const swap = this[i];
+    const objLength = Object.keys(this).length;
+
+    for (let i = 0; i < objLength; i++) {
+        delete this[i];
+    }
+
+    this[0] = swap;
+    this.length = 1;
+    return this;
+};
+
+$.prototype.index = function() {
+    const parent = this[0].parentNode;
+    const childs = [...parent.children];
+
+    const findMyIndex = (item) => {
+        return item == this[0];
+    };
+
+    return childs.findIndex(findMyIndex);
+};
+
+$.prototype.find = function(selector) {
+    let numberOfItems = 0;
+    let counter = 0;
+
+    const copyObj = Object.assign({}, this);
+
+    for (let i = 0; i < copyObj.length; i++) {
+        const arr = copyObj[i].querySelectorAll(selector);
+        if (arr.length == 0) {
+            continue;
+        }
+
+        for (let j = 0; j < arr.length; j++) {
+            this[counter] = arr[j];
+            counter++;
+        }
+
+        numberOfItems += arr.length;
+    }
+
+    this.length = numberOfItems;
+
+    const objLength = Object.keys(this).length;
+    for (; numberOfItems < objLength; numberOfItems++) {
+        delete this[numberOfItems];
+    }
+
+    return this;
+};
+
+$.prototype.closest = function(selector) {
+    let counter = 0;
+
+    for (let i = 0; i < this.length; i++) {
+        this[i] = this[i].closest(selector);
+        counter++;
+    }
+
+    const objLength = Object.keys(this).length;
+    for (; counter < objLength; counter++) {
+        delete this[counter];
+    }
+
+    return this;
+};
+
+$.prototype.siblings = function() {
+    let numberOfItems = 0;
+    let counter = 0;
+
+    const copyObj = Object.assign({}, this);
+
+    for (let i = 0; i < copyObj.length; i++) {
+        const arr = copyObj[i].parentNode.children;
+
+        for (let j = 0; j < arr.length; j++) {
+            if (copyObj[i] === arr[j]) {
+                continue;
+            }
+
+            this[counter] = arr[j];
+            counter++;
+        }
+
+        numberOfItems += arr.length - 1;
+    }
+
+    this.length = numberOfItems;
+
+    const objLength = Object.keys(this).length;
+    for (; numberOfItems < objLength; numberOfItems++) {
+        delete this[numberOfItems];
+    }
+
+    return this;
+}; */
 
 /***/ }),
 
